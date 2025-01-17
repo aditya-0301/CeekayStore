@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ceekaystore xmlns="http://www.example.com/ceekaystore">
+    <game>
+        <title>The Adventure Quest</title>
+        <genre>Action</genre>
+        <price>49.99</price>
+        <releaseDate>2025-03-15</releaseDate>
+    </game>
+    <game>
+        <title>Racing Mania</title>
+        <genre>Racing</genre>
+        <price>29.99</price>
+        <releaseDate>2025-01-22</releaseDate>
+    </game>
+</ceekaystore>
+
+<!-- XML Schema: CeekayStore.xsd -->
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" 
+           targetNamespace="http://www.example.com/ceekaystore"
+           xmlns="http://www.example.com/ceekaystore"
+           elementFormDefault="qualified">
+
+    <xs:element name="ceekaystore">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="game" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="title" type="xs:string"/>
+                            <xs:element name="genre" type="xs:string"/>
+                            <xs:element name="price" type="xs:decimal"/>
+                            <xs:element name="releaseDate" type="xs:date"/>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>

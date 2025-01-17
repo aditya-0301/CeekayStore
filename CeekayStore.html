@@ -1,0 +1,335 @@
+<html>
+    <style>
+        body {
+            margin: 0; 
+            font-family: Arial, sans-serif; 
+            background-color: #000000;
+        }
+        button {
+            background-color: #9251e0;
+            font-family: Garamond;
+            color: #ffffff;
+            height: 50px;
+            width: 120px;
+            border-radius: 5px;
+            align-content: flex-end;
+            align-self: flex-end;
+            align-items: flex-end;
+            margin-top: 7px;
+        }
+        .header {
+            background-color: #000000;
+            color: #ffffff;
+            padding: 10px; 
+            margin: 0; 
+        }
+        table {
+            width: 100%; 
+            border-collapse: collapse; 
+            padding: 10px;
+            margin: 20px;
+        }
+        th, td {
+            border: 1px solid #000; 
+            padding: 8px; 
+            text-align: left; 
+            
+        }
+        form {
+
+        }
+
+        .main {
+            background-color: #000000;
+            overflow-x:scroll;
+            scrollbar-width: none;
+
+          }
+
+        .container {
+            width: 300px;
+            height: 500;
+            background-color: #461e74;
+            border-radius: 5%;
+            margin-left: 15px;
+            position:relative;
+            animation-name:;
+            animation-duration: 4s;
+        }
+
+        
+
+        h2 {
+            font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif ;
+            color: #b28ed6;
+        }
+        
+        .bar {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: black;
+            color:rgb(135, 116, 161);
+            margin-left:10px;
+            margin-bottom: 10px;
+            margin-top: 10px;
+            font-weight:bolder;
+            width:183px;
+
+        }
+
+        .bar:hover{
+            background-color: #3f1e67;
+            text-shadow: 0 0 25px#000000,0 0 35px hsl(274, 59%, 71%);
+            
+        }
+
+        footer {
+            background-color: #461e74;
+            padding: 10px; 
+            margin-top:25px;
+            margin-bottom: 0;
+        }
+
+        p {
+            color: hsl(281, 32%, 77%);
+        }
+        .preview {
+            position: absolute;
+            right:-1060;
+            top:250;
+            width: 900px; 
+            height: auto; 
+            display: none; 
+            border-radius: 20px;
+            overflow: hidden;
+            z-index: 1;
+            animation: fadeInScale 0.4s ease forwards;
+            background-color: rgba(0, 0, 0, 0.8);
+            
+        }
+        
+        .preview video {
+            width: 90%; 
+            height: 100%; 
+            border-radius: 20px; 
+            border-style:solid;
+            border-color: #350c5b;
+            border-width: 20px;
+        }
+
+        @keyframes fadeInScale {
+            0% {
+                opacity: 0;
+                transform: translate(-50%, -50%) scale(0.8);
+            }
+            100% {
+                opacity: 1;
+                transform: translate(-50%, -50%) scale(1);
+            }
+        }
+
+        .cyberpunk:hover .preview {
+            display: block; 
+        }
+
+        #overlay {
+            position: fixed; 
+            display: none;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(0,0,0,0.5);
+            z-index: 2;
+            cursor: pointer; 
+          }
+    </style>
+
+
+    <header><div style="display:flexbox;background-color:#461e74" class="header">
+        <img style="margin-top:10px;border-radius:5px;height: 45;"src="Ceekay.jpg">
+        <div style="float:right;display:flex">
+            <div>
+                <form action="Bootstrap.html" method="GET">
+                <button  type="submit" class="button">Register</button>
+                </form>
+            </div>
+            <div>
+                <form action="cart.html" method="GET">
+                <button  type="submit" class="button">My Cart</button>
+                </form>
+            </div>
+            <div>
+                <form action="geolocation.html" method="GET">
+                    <button  type="submit" class="button">Geolocation</button>
+                </form>
+            </div>
+    </div></div></header>
+
+    <body>
+        <!-- <div id="overlay"></div> -->
+        <div style="display:flex;">
+            <center>
+                <a href="action.html"><button type="submit" class="bar">Action</button></a>
+                <a href="racing.html"><button type="submit"class="bar">Racing</button></a>
+                <button type="submit"class="bar">Rogue</button>
+                <button type="submit"class="bar">Casual</button>
+                <button type="submit"class="bar">FPS</button>
+                <button type="submit"class="bar">Arcade</button>
+                <button type="submit"class="bar">Horror</button>
+            </center>
+        </div>
+        
+        <center><img style="width: 1500; height: 300; object-fit: cover;"src="Posters.jpg"></br></br><button type="submit" class="button">SHOP NOW</button></center>
+        </br>
+        </br>
+        <center>
+        <div class="main" style="display:flex">
+            <div class="container" data-video="eldenring.mp4">
+                <center><img class="cyberpunk" style="border-radius: 10px;margin-top:25px; width: 250; height: 300; object-fit:cover;"src="eldenring.jpg">
+                    <div class="preview">
+                        <video muted loop>
+                            <source src="eldenring.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                </br>
+                </br>
+                <!-- <a href="eldenring.html"><h2>
+                    ELDEN RING
+                </h2></a>
+                <a href="eldenring.html"><h2>
+                    DIGITAL DELUXE EDITION (PC)
+                </h2></a></center> -->
+            </div>
+            <div class="container" data-video="cyberpunk.mp4">
+                <center><img class="cyberpunk"style="border-radius: 10px;margin-top:25px; width: 250; height: 300; object-fit:cover;"src="cyberpunk.jpg">
+                    <div class="preview">
+                        <video muted loop>
+                            <source src="cyberpunk.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                </br>x
+                </br>
+                <!-- <a href="cyberpunk.html"><h2>
+                    CYBERPUNK
+                </h2></a>
+                <a href="cyberpunk.html"><h2>
+                    STANDARD EDITION (PC)
+                </h2></a></center> -->
+            </div>
+            <div class="container" data-video="godofwar.mp4">
+                <center><img class="cyberpunk"style="border-radius: 10px;margin-top:25px; width: 250; height: 300; object-fit:cover;"src="godofwar.jpg">
+                    <div class="preview">
+                        <video muted loop>
+                            <source src="godofwar.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                </br>
+                </br>
+                <h2>
+                    GOD OF WAR
+                </h2>
+                <h2>
+                    PC EDITION
+                </h2></center>
+            </div>
+            <div class="container" data-video="unbound.mp4">
+                <center><img class="cyberpunk"style="border-radius: 10px;margin-top:25px; width: 250; height: 300; object-fit:cover;"src="unbound.png">
+                    <div class="preview">
+                        <video muted loop>
+                            <source src="unbound.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                </br>
+                </br>
+                <h2>
+                    NEED FOR SPEED UNBOUND
+                </h2>
+                <h2>
+                    STANDARD EDITION (PC)
+                </h2></center>
+            </div>
+            <div class="container">
+                <center><img style="border-radius: 10px;margin-top:25px; width: 250; height: 300; object-fit:cover;"src="wukong.jpg">
+                </br>
+                </br>
+                <h2>
+                    BLACK MYTH : WUKONG
+                </h2>
+                <h2>
+                    STANDARD EDITION (PC)
+                </h2></center>
+            </div></center>
+            <div class="container">
+                <center><img style="border-radius: 10px;margin-top:25px; width: 250; height: 300; object-fit:cover;"src="heat.jpg">
+                </br>
+                </br>
+                <h2>
+                    NEED FOR SPEED HEAT
+                </h2>
+                <h2>
+                    STANDARD EDITION (PC)
+                </h2></center>
+            </div>
+            <div class="container">
+                <center><img style="border-radius: 10px;margin-top:25px; width: 250; height: 300; object-fit:cover;"src="horizon5.jpg">
+                </br>
+                </br>
+                <h2>
+                    FORZA HORIZON 5
+                </h2>
+                <h2>
+                    STANDARD EDITION (PC)
+                </h2></center>
+            </div>
+        </div>
+        <script>document.querySelectorAll('.container').forEach(container => {
+            const video = container.querySelector('video'); 
+            const image = container.querySelector('.cyberpunk'); 
+            const preview = container.querySelector('.preview');
+            let hoverTimeout;
+            
+            container.addEventListener('mousemove', (event) => {
+                const rect = image.getBoundingClientRect();
+                const isMouseOverImage = (
+                    event.clientX >= rect.left &&
+                    event.clientX <= rect.right &&
+                    event.clientY >= rect.top &&
+                    event.clientY <= rect.bottom
+                );
+        
+                if (isMouseOverImage) {
+                    hoverTimeout = setTimeout(() => {
+                        preview.style.display = 'block'; 
+                        video.play();
+                    }, 1000);
+                    //document.getElementById("overlay").style.display = "block";
+                    
+                } else {
+                    clearTimeout(hoverTimeout);
+                    hoverTimeout = null;
+                    preview.style.display = 'none'; 
+                    video.pause();
+                    video.currentTime = 0; 
+                    //document.getElementById("overlay").style.display = "block";
+                }
+            });
+        
+            
+            container.addEventListener('mouseleave', () => {
+                clearTimeout(hoverTimeout);
+                preview.style.display = 'none'; 
+                video.pause();
+                video.currentTime = 0; 
+                //document.getElementById("overlay").style.display = "none";
+            });
+        });</script>
+    </body>
+    <footer>
+        <center><p>TO CONTACT US : ceekaygames@ck.com </p></center>
+    </br>
+    <center><p>Mobile number : 8856062088 </p></center>
+
+    </footer>
+</html>
